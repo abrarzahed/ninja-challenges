@@ -1,0 +1,49 @@
+:root {
+  --on: #6948ed;
+  --off: #555;
+  --toggle-width: 120px;
+  --toggle-height: 40px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #333;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.input {
+  display: none;
+}
+.switch {
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  background: var(--off);
+  border-radius: 100px;
+  padding: 0.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.trigger {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eee;
+  transition: 0.2s ease;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  left: 4px;
+}
+.input:checked ~ label .switch {
+  background: var(--on);
+}
+.input:checked ~ label .switch .trigger {
+  transition: 0.2s ease;
+  left: 84px;
+}
