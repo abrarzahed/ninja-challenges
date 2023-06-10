@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap");
 
 * {
   font-family: "Poppins";
@@ -18,4 +18,63 @@ section > div {
   text-align: left;
   height: 30px;
   line-height: 30px;
+  overflow: hidden;
+}
+.word-list {
+  position: relative;
+  animation: cycle ease 5s infinite;
+}
+.word-list span {
+  display: block;
+}
+.word-list span:nth-child(1) {
+  color: lime;
+}
+.word-list span:nth-child(2) {
+  color: crimson;
+}
+.word-list span:nth-child(3) {
+  color: orange;
+}
+.word-list span:nth-child(4) {
+  color: skyblue;
+}
+.word-list span:nth-child(5) {
+  color: yellow;
+}
+
+@keyframes cycle {
+  0% {
+    top: 0;
+  }
+  10% {
+    top: 0;
+  }
+  20% {
+    top: -30px;
+  }
+  30% {
+    top: -30px;
+  }
+  40% {
+    top: -60px;
+  }
+  50% {
+    top: -60px;
+  }
+  60% {
+    top: -90px;
+  }
+  70% {
+    top: -90px;
+  }
+  80% {
+    top: -120px;
+  }
+  90% {
+    top: -120px;
+  }
+  100% {
+    top: 0px;
+  }
 }
