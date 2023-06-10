@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap");
 
 * {
   font-family: "Poppins";
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background: #333;
@@ -17,6 +18,32 @@ body {
   height: 300px;
   margin: 30px auto;
   text-align: center;
+  /* overflow: hidden; */
 }
 
 /* solution */
+section {
+  perspective: 900px;
+}
+.card {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.card > div {
+  background: #222;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  border: 2px solid #eee;
+  cursor: pointer;
+  position: absolute;
+}
+.back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  color: #dbca6c;
+}
+.card.flipped {
+  transform: rotateY(180deg);
+}
